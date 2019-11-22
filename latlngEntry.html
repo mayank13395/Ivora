@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IVORA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #map {
+            height: 900px;
+            /* The height is 300 pixels */
+            width: 300%;
+        }
+        
+        html {
+            height: 300%;
+            margin: 0;
+        }
+        
+        .bg {
+            background-image: url("./assets/center.png");
+            /* height: 300%; */
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .btnn {
+            border: 3px solid #939723;
+            border-radius: 5px;
+            background-color: #30432C;
+            color: white;
+            text-align: center;
+            width: 120px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            display: block;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 30px;
+        }
+        
+        .btnn:hover {
+            background-color: #212e1e;
+        }
+        
+        .btnnn {
+            border: 3px solid #939723;
+            border-radius: 5px;
+            background-color: #30432C;
+            color: white;
+            text-align: center;
+            width: 120px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            /* display: block; */
+            margin-left: 20px;
+            /* transform: translateX(-50%); */
+            /* margin-bottom: 30px; */
+        }
+        
+        .btnnn:hover {
+            background-color: #212e1e;
+        }
+        
+        .btnnn2 {
+            border: 3px solid #939723;
+            border-radius: 5px;
+            background-color: #30432C;
+            color: white;
+            text-align: center;
+            width: 120px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            /* display: block; */
+            margin-left: 50px;
+            /* transform: translateX(-50%); */
+            /* margin-bottom: 30px; */
+        }
+        
+        .btnnn2:hover {
+            background-color: #212e1e;
+        }
+        
+        .last {
+            margin-bottom: 0px;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 20px;
+        }
+        
+        .inputDiv {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        
+        .latLong {
+            width: 100%;
+            border: 3px solid #5C7650;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .heading {
+            font-size: 20px;
+            color: white;
+        }
+        
+        .heading2 {
+            font-size: 18px;
+            color: white;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body background="./assets/background.jpg" style="overflow: hidden">
+
+    <div style="text-align: center; margin:auto; display: block; margin-top: 13vh; margin-bottom: 3vh;">
+        <p style="color: #6F8466;font-size:30px;word-spacing: 20px;letter-spacing: 3px;">
+            ENTER THE SENSOR LOCATIONS
+        </p>
+    </div>
+
+    <div style="width: 50%; height:420px; overflow: auto; top:0; bottom: 0; left: 0; right: 0; margin: auto; text-align: center;" class="bg">
+        <div style="position:relative; width:100%; height:100%;">
+            <div style="position: absolute; width: 100%; top: 53%; transform: translateY(-50%);">
+                <div class="container" style="width: 100%; padding-left: 30px;">
+                    <div class="row heading">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-4">Latitude</div>
+                        <div class="col-sm-4">Longitude</div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <p style="margin: 20px;"></p>
+                    <div class="row">
+                        <div class="col-sm-3 heading2">SENSOR 1</div>
+                        <div class="col-sm-4 inputDiv">
+                            <input id="sensorLat1" type="text" class="latLong" placeholder="Latitude" value="33.1716" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col-sm-4 inputDiv">
+                            <input id="sensorLon1" type="text" class="latLong" placeholder="Latitude" value="74.5946" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <p></p>
+                    <div class="row">
+                        <div class="col-sm-3 heading2">SENSOR 2</div>
+                        <div class="col-sm-4 inputDiv">
+                            <input id="sensorLat2" type="text" class="latLong" placeholder="Latitude" value="33.6716" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col-sm-4 inputDiv">
+                            <input id="sensorLon2" type="text" class="latLong" placeholder="Latitude" value="74.4946" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <p></p>
+                    <div class="row">
+                        <div class="col-sm-3 heading2">SENSOR 3</div>
+                        <div class="col-sm-4 inputDiv">
+                            <input id="sensorLat3" type="text" class="latLong" placeholder="Latitude" value="33.9716" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col-sm-4 inputDiv">
+                            <input id="sensorLon3" type="text" class="latLong" placeholder="Latitude" value="74.1946" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <p></p>
+                    <div class="row">
+                        <div class="col-sm-3 heading2">SENSOR 4</div>
+                        <div class="col-sm-4 inputDiv">
+                            <input id="sensorLat4" type="text" class="latLong" placeholder="Latitude" value="33.1716" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col-sm-4 inputDiv">
+                            <input id="sensorLon4" type="text" class="latLong" placeholder="Latitude" value="74.7946" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <p></p>
+                    <div class="row">
+                        <div class="col-sm-3 heading2">SENSOR 5</div>
+                        <div class="col-sm-4 inputDiv">
+                            <input id="sensorLat5" type="text" class="latLong" placeholder="Latitude" value="33.8716" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="col-sm-4 inputDiv">
+                            <input id="sensorLon5" type="text" class="latLong" placeholder="Latitude" value="74.1212" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <p></p>
+                    <div class="row">
+                        <div class="col-sm-3 heading2">SENSOR 6</div>
+                        <div class="col-sm-4 inputDiv">
+                            <input id="sensorLat6" type="text" class="latLong" placeholder="Latitude" value="33.8716" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col-sm-4 inputDiv">
+                            <input id="sensorLon6" type="text" class="latLong" placeholder="Latitude" value="74.9946" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <p></p>
+                </div>
+                <div style="margin-left: 20px; text-align:center">
+                    <div style="position:relative; margin: 30px; margin-left: 0px;">
+                        <button style="width: 80px" class="btnnn" id="gotoMapPage" onclick="createAnotherSensor()">+</button>
+                        <button style="width: 80px" class="btnnn" id="gotoMapPage" onclick="deleteSensor()">-</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top: 55px;">
+        <div style="position:relative; transform: translateX(-32px);">
+            <button id="gotoPreviousPage" class="btnnn2 ">Back</button>
+            <button id="gotoMapPage" onclick="showMap()" class="btnnn2 ">Submit</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/latlngEntry.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IVORA</title>
+    <style>
+        body {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #map {
+            height: 900px;
+            /* The height is 300 pixels */
+            width: 300%;
+        }
+
+        html {
+            height: 300%;
+            margin: 0;
+        }
+
+        .bg {
+            background-image: url("./assets/center.png");
+            /* height: 300%; */
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .btnn {
+            border: 3px solid #939723;
+            border-radius: 5px;
+            background-color: #30432C;
+            color: white;
+            text-align: center;
+            width: 120px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            display: block;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 30px;
+        }
+        
+        .btnn:hover {
+            background-color: #212e1e;
+        }
+
+        .last {
+            margin-bottom: 0px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 20px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+
+<body background="./assets/background.jpg" style="overflow: hidden">
+
+    <div style="text-align: center; margin:auto; display: block; margin-top: 13vh;">
+        <p style="color: #6F8466;font-size:30px;word-spacing: 20px;letter-spacing: 3px;">
+            SELECT MODE
+        </p>
+    </div>
+
+    <div style="position: absolute; width: 50%; height: 50%; overflow: auto; top:0; bottom: 0; left: 0; right: 0; margin: auto; text-align: center;" class="bg">
+        <div style="position:relative; width:100%; height:100%;">
+            <div style="position: absolute; width: 100%; top: 47%; transform: translateY(-50%);">
+                <button id="aas" class="btnn">AAS</button>
+                <button id="tas" class="btnn last">TAS</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/AacTacoption.js"></script>
+</body>
+
+</html>
